@@ -1,0 +1,45 @@
+
+Este proceso consiste en seleccionar un programa a ejecutar y determinar en cuál ordenador ejecutarlo.
+
+
+
+# EJECUCION DE UNA TAREA
+Cada vez que se procede a la ejecución de una tarea se debe tomar el programa que lleva más tiempo
+en espera,
+y determinar el ordenador donde se ejecutaría,
+considerando que el ordenador tenga una cantidad suficiente de procesadores libres y
+que tenga instalado el sistema operativo que lo soporte.
+
+# CREAR TAREA
+Al asignarle a un programa un ordenador para su ejecución,
+la aplicación crearía de esta forma una nueva tarea.
+Cuando se crea una tarea hay que actualizar el estado del ordenador que la ejecuta
+(se incrementa la cantidad de procesadores en uso).
+
+## si no existe un ordenador para ese programa se pone al final
+En caso de que no exista un ordenador que lo pueda ejecutar el programa pasa a ser el último
+en ser tenido en cuenta para su ejecución.
+
+
+1. Implemente la funcionalidad CrearTarea() de la clase Planificador. Esta funcionalidad debe crear
+una tarea según el proceso descrito con anterioridad.
+
+
+2. Implemente la funcionalidad TiempoEstimado():Real de la clase Planificador. Esta funcionalidad
+devuelve el tiempo estimado que demora el centro de cálculo en ejecutar, en un momento dado,
+las tareas que tienen asignadas sus ordenadores.
+
+
+3. Implemente la funcionalidad EjecutarPrimero(sOperativo:Cadena) de la clase Planificador. Esta
+funcionalidad reorganiza los programas en espera de manera tal que sean atendidos primero los
+programas soportados por el sistema operativo dado, manteniendo el orden relativo de los
+demás programas.
+
+4. Implemente la funcionalidad ProcesadoresLibres(idOrdenador:Cadena):Entero de la clase
+Planificador. Esta funcionalidad devuelve la cantidad de procesadores libres que tiene un
+ordenador dado, identificado por su id, en un momento determinado.
+
+5. Implemente la funcionalidad EjecutarPrimeroSecuenciales() de la clase Planificador. Esta
+funcionalidad reorganiza los programas en espera de manera tal que sean atendidos primero los
+programas que solo necesitan un procesador para su ejecución, manteniendo el orden relativo
+de los demás programas
